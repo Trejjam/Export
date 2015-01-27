@@ -1,0 +1,31 @@
+{contentType xml}
+	<SHOPITEM>
+		<ITEM_ID>{$product->id}</ITEM_ID>
+		<PRODUCTNAME>{$product->name}</PRODUCTNAME>
+		<PRODUCT n:ifset="$product->longName">{$product->longName}</PRODUCT>
+		<DESCRIPTION n:ifset="$product->description">{$product->description}</DESCRIPTION>
+		<URL>{$product->url}</URL>
+		<IMGURL n:ifset="$product->img">{$product->img}</IMGURL>
+		<IMGURL_ALTERNATIVE n:foreach="$product->imgAlternative as $img">{$img}</IMGURL_ALTERNATIVE>
+		<VIDEO_URL n:ifset="$product->video">{$product->video}</VIDEO_URL>
+		<PRICE_VAT n:ifset="$product->price">{$product->price}</PRICE_VAT>
+		<ITEM_TYPE n:ifset="$product->type">{$product->type}</ITEM_TYPE>
+		<HEUREKA_CPC n:ifset="$product->cpc">{$product->cpc}</HEUREKA_CPC>
+		<MANUFACTURER n:ifset="$product->manufacturer">{$product->manufacturer}</MANUFACTURER>
+		<CATEGORYTEXT n:ifset="$product->category">{$product->category}</CATEGORYTEXT>
+		<EAN n:ifset="$product->ean">{$product->ean}</EAN>
+		<ISBN n:ifset="$product->isbn">{$product->isbn}</ISBN>
+		<PRODUCTNO n:ifset="$product->no">{$product->no}</PRODUCTNO>
+		<PARAM n:foreach="$product->params as $param">
+			<PARAM_NAME>{$param->name}</PARAM_NAME>
+			<VAL>{$param->value}</VAL>
+		</PARAM>
+		<DELIVERY_DATE n:ifset="$product->deliveryDate">{$product->deliveryDate}</DELIVERY_DATE>
+		<DELIVERY n:foreach="$product->delivery as $delivery">
+			<DELIVERY_ID>{$delivery->name}</DELIVERY_ID>
+			<DELIVERY_PRICE>{$delivery->price}</DELIVERY_PRICE>
+			<DELIVERY_PRICE_COD n:ifset="$delivery->priceCod">{$delivery->priceCod}</DELIVERY_PRICE_COD>
+		</DELIVERY>
+		<ITEMGROUP_ID n:ifset="$product->groupId">{$product->groupId}</ITEMGROUP_ID>
+		<ACCESSORY n:ifset="$product->accessory">{$product->accessory}</ACCESSORY>
+	</SHOPITEM>
