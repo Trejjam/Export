@@ -2,7 +2,8 @@ Authorization
 =============
 
 Library for export products to 
-- Heureka
+- [Heureka](http://www.heureka.cz/)
+
 in [Nette](http://nette.org)
 
 Installation
