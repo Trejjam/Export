@@ -62,16 +62,9 @@ class CliExport extends Command
 					continue;
 				}
 
-				$items = $this->products->getItems($v, $this, $input, $output);
-				if (is_null($items)) {
-					continue;
-				}
-
 				$storage = new Trejjam\Export\StoreItems($this->config['exportsDir'] . '/' . $v . '.xml', $v);
 
-				foreach ($items as $v2) {
-					$storage->addItem($v2);
-				}
+				$this->products->getItems($storage, $v, $this, $input, $output);
 
 				$storage->completion();
 
