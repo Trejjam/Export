@@ -18,9 +18,11 @@ interface IProducts
 	/**
 	 * null - $shop not supported
 	 *
-	 * @param                                           $shop
-	 * @param Symfony\Component\Console\Command\Command $command
+	 * @param                                                  $shop
+	 * @param Symfony\Component\Console\Command\Command        $command
+	 * @param Symfony\Component\Console\Input\InputInterface   $input
+	 * @param Symfony\Component\Console\Output\OutputInterface $output
 	 * @return null|IItem[]
 	 */
-	public function getItems($shop, Symfony\Component\Console\Command\Command $command);
+	public function getItems($shop, Symfony\Component\Console\Command\Command $command, Symfony\Component\Console\Input\InputInterface $input, Symfony\Component\Console\Output\OutputInterface $output);
 }
