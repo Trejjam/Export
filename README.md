@@ -1,5 +1,5 @@
-Authorization
-=============
+Export
+======
 
 Library for export products to 
 - [Heureka](http://www.heureka.cz/)
@@ -30,13 +30,8 @@ export:
 Config
 ------
 
-The best way for configuration is using [Kdyby/Console](https://github.com/kdyby/console)
-
-```sh
-$ composer require kdyby/console
-```
-
-Read how to install [Kdyby/Console](https://github.com/Kdyby/Console/blob/master/docs/en/index.md)
+For run is used [Kdyby/Console](https://github.com/kdyby/console)
+Read how to setup [Kdyby/Console](https://github.com/Kdyby/Console/blob/master/docs/en/index.md)
 
 ```sh
 php index.php
