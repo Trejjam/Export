@@ -10,6 +10,7 @@ namespace Trejjam\Export;
 
 
 use Nette,
+	Symfony,
 	Trejjam;
 
 interface IProducts
@@ -17,9 +18,9 @@ interface IProducts
 	/**
 	 * null - $shop not supported
 	 *
-	 * @param                                $shop
-	 * @param Nette\Application\UI\Presenter $presenter
+	 * @param                                           $shop
+	 * @param Symfony\Component\Console\Command\Command $command
 	 * @return null|IItem[]
 	 */
-	public function getItems($shop, Nette\Application\UI\Presenter $presenter);
+	public function getItems($shop, Symfony\Component\Console\Command\Command $command);
 }

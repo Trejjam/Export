@@ -62,7 +62,7 @@ class CliExport extends Command
 					continue;
 				}
 
-				$items = $this->products->getItems($v, $this->getHelper('presenter')->getPresenter());
+				$items = $this->products->getItems($v, $this);
 				if (is_null($items)) {
 					continue;
 				}
