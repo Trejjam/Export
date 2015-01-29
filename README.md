@@ -63,9 +63,7 @@ class Products implements Trejjam\Export\IProducts {
 	/**
      *  {@inheritdoc}
      */
-    public function getItems($shop, Nette\Application\UI\Presenter $presenter) {
-        $out = [];
-
+    public function getItems(Trejjam\Export\StoreItems $storage, $shop, Symfony\Component\Console\Command\Command $command, Symfony\Component\Console\Input\InputInterface $input, Symfony\Component\Console\Output\OutputInterface $output) {
         foreach ($this->getProducts() as $v) {
             $item = new Trejjam\Export\Heureka\Item;
 
@@ -106,10 +104,8 @@ class Products implements Trejjam\Export\IProducts {
             $item->groupId;
             $item->accessory;
 
-            $out[] = $item;
+            $storage->addItem($item);
         }
-
-        return $out;
     }
 }
 ```
