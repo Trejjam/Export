@@ -1,5 +1,5 @@
 {contentType xml}
-	<SHOPITEM>
+	<SHOPITEM>{block item}
 		<PRODUCT n:ifset="$product->product">{$product->product}</PRODUCT>
 		<PRODUCTNAME n:ifset="$product->name">{$product->name}</PRODUCTNAME>
 		<PRODUCTNAMEEXT n:ifset="$product->nameExt">{$product->nameExt}</PRODUCTNAMEEXT>
@@ -9,8 +9,8 @@
         <PRICE n:ifset="$product->price">{$product->price}</PRICE>
         <VAT n:ifset="$product->vat">{$product->vat}</VAT>
         <PRICE_VAT n:ifset="$product->priceVat">{$product->priceVat}</PRICE_VAT>
-        <MAX_CPC n:ifset="$product->cpc">{$product->cpc}</MAX_CPC>
-        <MAX_CPC_SEARCH n:ifset="$product->searchCpc">{$product->searchCpc}</MAX_CPC_SEARCH>
+        <MAX_CPC n:if="isset($product->cpc) && $product->cpc>0">{$product->cpc}</MAX_CPC>
+        <MAX_CPC_SEARCH n:if="isset($product->searchCpc) && $product->searchCpc>0">{$product->searchCpc}</MAX_CPC_SEARCH>
         <DUES n:ifset="$product->dues">{$product->dues}</DUES>
 		<DELIVERY_DATE n:ifset="$product->deliveryDate">{$product->deliveryDate}</DELIVERY_DATE>
 		<SHOP_DEPOTS n:ifset="$product->shopDepots">{$product->shopDepots}</SHOP_DEPOTS>
@@ -22,7 +22,7 @@
 		<EAN n:ifset="$product->ean">{$product->ean}</EAN>
         <PRODUCTNO n:ifset="$product->no">{$product->no}</PRODUCTNO>
         {ifset $product->variants}<VARIANT n:foreach="$product->variants as $variant">
-			{include 'item.latte' 'product'=>$variant}
+			{include item 'product'=>$variant}
 		</VARIANT>
 		{/ifset}
-	</SHOPITEM>
+	{/block}</SHOPITEM>

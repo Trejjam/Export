@@ -54,4 +54,6 @@ class Variant extends Nette\Object
 	public $category;
 	/** @var string */
 	public $no;
+	/** @var string */
+	public $ean;
 }

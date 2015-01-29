@@ -26,6 +26,17 @@ class Item extends Variant implements Trejjam\Export\IItem
 					$success = TRUE;
 
 					foreach ($required as $v2) {
+						$subSuccess = (bool)count($this->variants);
+						foreach ($this->variants as $v3) {
+							if (!isset($v3->{$v2})) {
+								$subSuccess = FALSE;
+								break;
+							}
+						}
+						if ($subSuccess) {
+							continue;
+						}
+
 						if (!isset($this->{$v2})) {
 							$success = FALSE;
 							break;
