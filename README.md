@@ -153,5 +153,5 @@ $ php index.php Cron:export -p
 Execute config
 ----------------------
 ```sh
-$ php index.php Cron:export -e heureka[,...]
+$ php index.php Cron:export -e heureka -e zbozi
 ```
