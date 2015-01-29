@@ -10,7 +10,7 @@
 		<VIDEO_URL n:ifset="$product->video">{$product->video}</VIDEO_URL>
 		<PRICE_VAT n:ifset="$product->price">{$product->price}</PRICE_VAT>
 		<ITEM_TYPE n:ifset="$product->type">{$product->type}</ITEM_TYPE>
-		<HEUREKA_CPC n:ifset="$product->cpc">{$product->cpc}</HEUREKA_CPC>
+		<HEUREKA_CPC n:if="isset($product->cpc) && $product->cpc>0">{$product->cpc}</HEUREKA_CPC>
 		<MANUFACTURER n:ifset="$product->manufacturer">{$product->manufacturer}</MANUFACTURER>
 		<CATEGORYTEXT n:ifset="$product->category">{$product->category}</CATEGORYTEXT>
 		<EAN n:ifset="$product->ean">{$product->ean}</EAN>
