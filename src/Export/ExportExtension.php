@@ -15,7 +15,8 @@ class ExportExtension extends Nette\DI\CompilerExtension
 	private $defaults = [
 		'exportsDir' => '%wwwDir%',
 		'exports'    => [
-			'heureka',
+			'heureka' => TRUE,
+			'zbozi'   => TRUE,
 		],
 	];
 

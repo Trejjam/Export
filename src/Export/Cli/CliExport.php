@@ -48,8 +48,10 @@ class CliExport extends Command
 		if ($printExports) {
 			$output->writeln('Available exports:');
 
-			foreach ($this->config['exports'] as $v) {
-				$output->writeln('- ' . $v);
+			foreach ($this->config['exports'] as $k => $v) {
+				if ($v) {
+					$output->writeln('- ' . $k);
+				}
 			}
 		}
 
@@ -58,7 +60,7 @@ class CliExport extends Command
 				if (is_null($v)) {
 					continue;
 				}
-				if (!in_array($v, $this->config['exports'])) {
+				if (!isset($this->config['exports'][$v]) || !$this->config['exports'][$v]) {
 					continue;
 				}
 
