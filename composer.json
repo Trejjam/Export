@@ -1,9 +1,10 @@
 {
 	"name": "trejjam/export",
-	"description": "Export products for Heureka",
+	"description": "Export products for Heureka and Zbozi",
 	"keywords": [
 		"nette",
-		"heureka"
+		"heureka",
+		"zbozi"
 	],
 	"license": [
 		"MIT"

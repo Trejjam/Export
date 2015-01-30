@@ -3,6 +3,7 @@ Export
 
 Library for export products to 
 - [Heureka](http://www.heureka.cz/)
+- [Zbozi](http://www.zbozi.cz/)
 
 in [Nette](http://nette.org)
 
