@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: jam
  * Date: 27.1.15
- * Time: 18:42
+ * Time: 18:43
  */
 
 namespace Trejjam\Export\Heureka;
@@ -11,8 +11,10 @@ namespace Trejjam\Export\Heureka;
 
 use Trejjam;
 
-class AlternativeImg
+class Params
 {
 	/** @var string */
-	public $img;
+	public $name;
+	/** @var string */
+	public $value;
 }

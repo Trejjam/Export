@@ -6,7 +6,7 @@
  * Time: 17:38
  */
 
-namespace Trejjam\DI;
+namespace Trejjam\Export\DI;
 
 use Nette;
 
@@ -28,7 +28,7 @@ class ExportExtension extends Nette\DI\CompilerExtension
 
 		if (class_exists('\Symfony\Component\Console\Command\Command')) {
 			$command = [
-				"cliExport" => "CliExport",
+				'cliExport' => 'Cli\Export',
 			];
 
 			foreach ($command as $k => $v) {
@@ -36,7 +36,7 @@ class ExportExtension extends Nette\DI\CompilerExtension
 						->setClass('Trejjam\Export\\' . $v, [
 							$config,
 						])
-						->addTag("kdyby.console.command");
+						->addTag('kdyby.console.command');
 			}
 		}
 	}

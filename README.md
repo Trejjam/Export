@@ -22,7 +22,7 @@ Configuration
 .neon
 ```yml
 extensions:
-	export: Trejjam\DI\ExportExtension
+	export: Trejjam\Export\DI\ExportExtension
 
 export:
 	exportsDir: '%wwwDir%'

@@ -6,7 +6,7 @@
  * Time: 20:39
  */
 
-namespace Trejjam\Export;
+namespace Trejjam\Export\Cli;
 
 
 use Symfony\Component\Console\Command\Command,
@@ -17,18 +17,18 @@ use Symfony\Component\Console\Command\Command,
 use Nette,
 	Trejjam;
 
-class CliExport extends Command
+class Export extends Command
 {
 	/**
 	 * @var
 	 */
 	private $config;
 	/**
-	 * @var IProducts
+	 * @var Trejjam\Export\IProducts
 	 */
 	private $products;
 
-	public function __construct($config, IProducts $products) {
+	public function __construct($config, Trejjam\Export\IProducts $products) {
 		parent::__construct();
 
 		$this->config = $config;
