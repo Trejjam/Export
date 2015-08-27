@@ -6,7 +6,7 @@
 		<DESCRIPTION n:ifset="$product->description">{$product->description}</DESCRIPTION>
 		<URL>{$product->url}</URL>
 		<IMGURL n:ifset="$product->img">{$product->img}</IMGURL>
-		<IMGURL_ALTERNATIVE n:foreach="$product->imgAlternative as $img">{$img}</IMGURL_ALTERNATIVE>
+		<IMGURL_ALTERNATIVE n:foreach="$product->imgAlternative as $img">{$img->img}</IMGURL_ALTERNATIVE>
 		<VIDEO_URL n:ifset="$product->video">{$product->video}</VIDEO_URL>
 		<PRICE_VAT n:ifset="$product->price">{$product->price}</PRICE_VAT>
 		<ITEM_TYPE n:ifset="$product->type">{$product->type}</ITEM_TYPE>
